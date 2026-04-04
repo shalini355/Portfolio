@@ -60,7 +60,7 @@ export default function Contact() {
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-gray-500">LinkedIn</p>
             <a href="https://www.linkedin.com/in/shalini-yadav" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-white transition">
-              linkedin.com/in/shalini-yadav
+              linkedin.com/in/shalini-yadav-355abc
             </a>
           </div>
         </div>
