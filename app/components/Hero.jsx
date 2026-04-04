@@ -1,16 +1,15 @@
 "use client";
 
-import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
 
-    <section className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 overflow-hidden">
 
       {/* Background Glow */}
-      <div className="absolute w-[600px] h-[600px] bg-purple-600/20 blur-[140px] rounded-full top-[-150px] left-[-150px]" />
-      <div className="absolute w-[500px] h-[500px] bg-blue-600/20 blur-[120px] rounded-full bottom-[-120px] right-[-120px]" />
+      <div className="absolute w-150 h-150 bg-purple-600/20 blur-[140px] rounded-full -top-37.5 -left-37.5" />
+      <div className="absolute w-125 h-125 bg-blue-600/20 blur-[120px] rounded-full -bottom-30 -right-30" />
 
       {/* Content */}
       <div className="relative text-center max-w-3xl">
@@ -22,96 +21,77 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-bold tracking-tight"
         >
-          <span className="text-white">
-            Shalini Yadav
-          </span>
+          <span className="text-white">Hi, I&apos;m Shalini Yadav</span>
         </motion.h1>
 
-        {/* Animated Role */}
-        <motion.div
+        {/* Role */}
+        <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.4 }}
-          className="mt-6 text-xl md:text-2xl text-purple-300 font-medium"
+          transition={{ delay: 0.3 }}
+          className="mt-6 text-3xl md:text-4xl font-semibold text-purple-300"
         >
-          <TypeAnimation
-            sequence={[
-              "AI Developer",
-              2000,
-              "Full Stack Engineer",
-              2000,
-              "Generative AI Builder",
-              2000,
-            ]}
-            speed={50}
-            repeat={Infinity}
-          />
-        </motion.div>
+          AI-Focused Full Stack Developer
+        </motion.p>
 
         {/* Description */}
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-          className="mt-8 text-gray-400 text-lg leading-relaxed"
+          transition={{ delay: 0.5 }}
+          className="mt-8 text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto"
         >
-          I build intelligent web applications powered by Generative AI,
-          scalable backend architecture, and modern user experiences
-          designed for real-world impact.
+          I build intelligent web applications using React, Node.js, and
+          Generative AI to create meaningful user experiences.
         </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.7 }}
+          className="mt-4 text-sm text-gray-400 max-w-2xl mx-auto"
+        >
+          Building AI-powered web applications that combine intelligent systems
+          with modern user experiences.
+        </motion.p>
+
+        {/* Highlights */}
+        <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          {[
+            { value: "5+", label: "Launch-ready projects" },
+            { value: "AI", label: "Expertise area" },
+            { value: "Impact", label: "Recruiter-ready focus" },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="rounded-3xl border border-white/10 bg-white/5 px-6 py-5 text-left shadow-lg shadow-slate-900/20"
+            >
+              <p className="text-3xl font-semibold text-white">{item.value}</p>
+              <p className="mt-2 text-sm text-gray-400">{item.label}</p>
+            </div>
+          ))}
+        </div>
 
         {/* Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.8 }}
-          className="mt-12 flex flex-wrap justify-center gap-6"
+          className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:flex-wrap sm:justify-center"
         >
-
-          {/* VIEW PROJECTS */}
           <a
             href="#projects"
-            className="
-      relative px-10 py-4 rounded-xl font-semibold
-      text-white overflow-hidden group
-      bg-gradient-to-r from-purple-600 to-blue-500
-      transition-all duration-300
-      shadow-lg shadow-purple-500/30
-      hover:shadow-purple-500/60 hover:-translate-y-1
-    "
+            className="relative inline-flex w-full max-w-60 items-center justify-center px-10 py-4 rounded-3xl font-semibold text-white overflow-hidden bg-linear-to-r from-purple-600 to-blue-500 shadow-lg shadow-purple-500/30 transition duration-300 hover:-translate-y-1 sm:w-auto"
           >
-            <span className="relative z-10">
-              View Projects →
-            </span>
-            {/* <h1 className="text-red-500 text-6xl">
-  TEST
-</h1> */}
-
-            {/* animated shine */}
-            <span className="
-      absolute inset-0 opacity-0 group-hover:opacity-100
-      transition duration-500
-      bg-gradient-to-r from-transparent via-white/20 to-transparent
-      translate-x-[-100%] group-hover:translate-x-[100%]
-    "/>
+            View Projects →
           </a>
 
-          {/* RESUME BUTTON */}
           <a
             href="/resume.pdf"
-            className="
-      px-10 py-4 rounded-xl font-medium
-      border border-white/20
-      backdrop-blur-md
-      bg-white/5
-      hover:bg-white/10
-      hover:-translate-y-1
-      transition-all duration-300
-    "
+            className="inline-flex w-full max-w-60 items-center justify-center px-10 py-4 rounded-3xl font-semibold text-white border border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-300 sm:w-auto"
           >
             Download Resume
           </a>
-
         </motion.div>
       </div>
     </section>

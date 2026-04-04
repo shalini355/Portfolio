@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 export default function Contact() {
   return (
-    <section className="relative py-28 px-6 text-center overflow-hidden">
+    <section className="relative py-24 px-4 sm:px-6 text-center overflow-hidden">
 
       {/* Background Glow */}
-      <div className="absolute w-[500px] h-[500px] bg-purple-600/20 blur-[140px] rounded-full left-1/2 -translate-x-1/2 top-10 -z-10" />
+      <div className="absolute w-125 h-125 bg-purple-600/20 blur-[140px] rounded-full left-1/2 -translate-x-1/2 top-10 -z-10" />
 
       {/* Heading */}
       <motion.h2
@@ -40,38 +40,36 @@ export default function Contact() {
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ delay: 0.3 }}
         viewport={{ once: true }}
-        className="
-          max-w-md mx-auto
-          bg-white/5
-          backdrop-blur-lg
-          border border-white/10
-          rounded-2xl
-          p-10
-          shadow-xl shadow-purple-500/10
-        "
+        className="max-w-md mx-auto bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-10 shadow-xl shadow-purple-500/10"
       >
         <p className="text-gray-300 mb-6">
-          Reach me directly via email:
+          Reach me directly via email or explore my work online.
         </p>
 
-        {/* Email */}
-        <p className="text-purple-400 font-medium mb-8">
-          syhalini@gmail.com
-        </p>
+        {/* Contact Info */}
+        <div className="space-y-4 mb-8 text-left">
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-gray-500">Email</p>
+            <p className="text-purple-400 font-medium">syhalini@gmail.com</p>
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-gray-500">GitHub</p>
+            <a href="https://github.com/shalini355" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-white transition">
+              github.com/shalini355
+            </a>
+          </div>
+          <div>
+            <p className="text-xs uppercase tracking-[0.25em] text-gray-500">LinkedIn</p>
+            <a href="https://www.linkedin.com/in/shalini-yadav" target="_blank" rel="noreferrer" className="text-gray-300 hover:text-white transition">
+              linkedin.com/in/shalini-yadav
+            </a>
+          </div>
+        </div>
 
         {/* Button */}
         <a
           href="mailto:syhalini@gmail.com"
-          className="
-            inline-block
-            px-10 py-4
-            rounded-xl
-            font-semibold
-            bg-gradient-to-r from-purple-600 to-blue-500
-            transition-all duration-300
-            hover:-translate-y-1
-            hover:shadow-lg hover:shadow-purple-500/40
-          "
+          className="inline-block px-10 py-4 rounded-xl font-semibold bg-linear-to-r from-purple-600 to-blue-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/40"
         >
           Contact Me →
         </a>

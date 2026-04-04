@@ -3,20 +3,30 @@
 import { motion } from "framer-motion";
 
 export default function Skills() {
-  const skills = [
-    "React.js",
-    "Node.js",
-    "Express",
-    "Python",
-    "TensorFlow",
-    "Generative AI",
+  const categories = [
+    {
+      title: "Frontend",
+      items: ["React.js", "Next.js", "Tailwind CSS"],
+    },
+    {
+      title: "Backend",
+      items: ["Node.js", "Express.js", "REST APIs"],
+    },
+    {
+      title: "AI / ML",
+      items: ["TensorFlow", "Generative AI APIs", "Prompt Engineering"],
+    },
+    {
+      title: "Tools",
+      items: ["GitHub", "Vercel", "Postman"],
+    },
   ];
 
   return (
     <section id="skills" className="relative py-28 px-6 text-center">
 
       {/* background glow */}
-      <div className="absolute w-[500px] h-[500px] bg-blue-600/10 blur-[140px] rounded-full -z-10 right-0" />
+      <div className="absolute w-125 h-125 bg-blue-600/10 blur-[140px] rounded-full -z-10 right-0" />
 
       {/* Heading */}
       <motion.h2
@@ -30,30 +40,27 @@ export default function Skills() {
       </motion.h2>
 
       {/* Skills Grid */}
-      <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
-        {skills.map((skill, i) => (
+      <div className="grid gap-6 max-w-5xl mx-auto sm:grid-cols-2 xl:grid-cols-4">
+        {categories.map((category, i) => (
           <motion.div
             key={i}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ delay: i * 0.08 }}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: i * 0.1 }}
             viewport={{ once: true }}
-            className="
-              px-8 py-4
-              rounded-xl
-              bg-white/5
-              backdrop-blur-lg
-              border border-white/10
-              text-gray-200
-              font-medium
-              cursor-default
-              transition-all duration-300
-              hover:-translate-y-2
-              hover:border-purple-400
-              hover:shadow-lg hover:shadow-purple-500/30
-            "
+            className="rounded-3xl bg-white/5 backdrop-blur-lg border border-white/10 p-6 text-left shadow-xl shadow-slate-950/10"
           >
-            {skill}
+            <p className="text-sm uppercase tracking-[0.3em] text-purple-300 mb-4">
+              {category.title}
+            </p>
+            <div className="space-y-3">
+              {category.items.map((skill, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <span className="text-purple-400">•</span>
+                  <span className="text-gray-200">{skill}</span>
+                </div>
+              ))}
+            </div>
           </motion.div>
         ))}
       </div>
