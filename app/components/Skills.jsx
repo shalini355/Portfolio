@@ -6,19 +6,31 @@ export default function Skills() {
   const categories = [
     {
       title: "Frontend",
-      items: ["React.js", "Next.js", "Tailwind CSS"],
+      items: [
+        "React.js",
+        "Next.js",
+        "HTML5",
+        "CSS3",
+        "Tailwind CSS",
+        "Responsive Design",
+      ],
     },
     {
       title: "Backend",
-      items: ["Node.js", "Express.js", "REST APIs"],
+      items: ["Node.js", "Express.js", "REST API Development"],
     },
     {
       title: "AI / ML",
-      items: ["TensorFlow", "Generative AI APIs", "Prompt Engineering"],
+      items: [
+        "TensorFlow",
+        "Machine Learning",
+        "Generative AI APIs",
+        "Prompt Engineering",
+      ],
     },
     {
       title: "Tools",
-      items: ["GitHub", "Vercel", "Postman"],
+      items: ["Git", "GitHub", "Vercel", "Postman", "VS Code"],
     },
   ];
 

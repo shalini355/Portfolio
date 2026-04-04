@@ -1,8 +1,45 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
+const roles = [
+  "AI-Focused Full Stack Developer",
+  "Software Developer",
+  "Product-driven Full Stack Engineer",
+  "AI Application Builder",
+];
 
 export default function Hero() {
+  const [text, setText] = useState("");
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [speed, setSpeed] = useState(100);
+
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+    const updateText = isDeleting
+      ? currentRole.slice(0, text.length - 1)
+      : currentRole.slice(0, text.length + 1);
+
+    const timer = setTimeout(() => {
+      setText(updateText);
+
+      if (!isDeleting && updateText === currentRole) {
+        setIsDeleting(true);
+        setSpeed(1500);
+      } else if (isDeleting && updateText === "") {
+        setIsDeleting(false);
+        setRoleIndex((roleIndex + 1) % roles.length);
+        setSpeed(500);
+      } else {
+        setSpeed(isDeleting ? 60 : 120);
+      }
+    }, speed);
+
+    return () => clearTimeout(timer);
+  }, [text, isDeleting, roleIndex, speed]);
+
   return (
 
     <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 overflow-hidden">
@@ -29,9 +66,15 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="mt-6 text-3xl md:text-4xl font-semibold text-purple-300"
+          className="mt-6 text-2xl md:text-3xl font-semibold text-purple-300"
         >
-          AI-Focused Full Stack Developer
+          <span className="block">
+            <span className="text-white">{text}</span>
+            <span className="inline-block ml-2 text-white opacity-80 animate-pulse">|</span>
+          </span>
+          <span className="block mt-2 text-xs md:text-sm text-gray-400 uppercase tracking-[0.25em]">
+            AI Developer · Software Developer · Full Stack Engineer
+          </span>
         </motion.p>
 
         {/* Description */}
@@ -41,8 +84,10 @@ export default function Hero() {
           transition={{ delay: 0.5 }}
           className="mt-8 text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto"
         >
-          I build intelligent web applications using React, Node.js, and
-          Generative AI to create meaningful user experiences.
+          I build intelligent web applications by combining modern web
+          technologies with Generative AI. My work focuses on creating
+          responsive, user-centric systems powered by real-world machine
+          learning and scalable backend architecture.
         </motion.p>
 
         <motion.p
@@ -51,26 +96,10 @@ export default function Hero() {
           transition={{ delay: 0.7 }}
           className="mt-4 text-sm text-gray-400 max-w-2xl mx-auto"
         >
-          Building AI-powered web applications that combine intelligent systems
-          with modern user experiences.
+          Currently pursuing B.Tech in Computer Science and actively seeking
+          Software Development and AI Internship opportunities.
         </motion.p>
 
-        {/* Highlights */}
-        <div className="mt-10 grid gap-4 sm:grid-cols-3">
-          {[
-            { value: "5+", label: "Launch-ready projects" },
-            { value: "AI", label: "Expertise area" },
-            { value: "Impact", label: "Recruiter-ready focus" },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="rounded-3xl border border-white/10 bg-white/5 px-6 py-5 text-left shadow-lg shadow-slate-900/20"
-            >
-              <p className="text-3xl font-semibold text-white">{item.value}</p>
-              <p className="mt-2 text-sm text-gray-400">{item.label}</p>
-            </div>
-          ))}
-        </div>
 
         {/* Buttons */}
         <motion.div
@@ -87,7 +116,7 @@ export default function Hero() {
           </a>
 
           <a
-            href="/resume.pdf"
+            href="/api/resume"
             className="inline-flex w-full max-w-60 items-center justify-center px-10 py-4 rounded-3xl font-semibold text-white border border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-300 sm:w-auto"
           >
             Download Resume

@@ -29,9 +29,8 @@ export default function Contact() {
         viewport={{ once: true }}
         className="text-gray-400 max-w-xl mx-auto mb-12"
       >
-        Have an idea, project, or collaboration in mind?
-        I’m always excited to work on impactful AI and
-        full-stack applications.
+        I am actively seeking Software Development and AI Internship opportunities.
+        If you are working on exciting ideas or innovative products, I would love to contribute and collaborate.
       </motion.p>
 
       {/* Contact Card */}
@@ -65,14 +64,6 @@ export default function Contact() {
             </a>
           </div>
         </div>
-
-        {/* Button */}
-        <a
-          href="mailto:syhalini@gmail.com"
-          className="inline-block px-10 py-4 rounded-xl font-semibold bg-linear-to-r from-purple-600 to-blue-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-purple-500/40"
-        >
-          Contact Me →
-        </a>
       </motion.div>
     </section>
   );

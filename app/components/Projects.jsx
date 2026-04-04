@@ -7,33 +7,64 @@ export default function Projects() {
     {
       name: "Kai — AI Wellness Assistant",
       highlight: "Feature project",
-      problem: "Users need a conversational AI assistant that can understand emotional context and support wellness tasks.",
-      solution: "A multilingual AI agent built with conversational state, context awareness, and generative responses for meaningful support.",
-      architecture: "Next.js frontend, Node.js backend, OpenAI API integration, and a responsive chat interface.",
-      tech: ["Next.js", "Node.js", "OpenAI", "Tailwind CSS"],
-      demo: "Conversational UI with wellness prompts, session memory, and a polished mobile-ready layout.",
+      description:
+        "Kai is an AI-powered conversational assistant designed to provide empathetic and contextual interactions for mood tracking and wellness support.",
+      problem:
+        "Many digital assistants lack emotional awareness and natural conversational flow. The goal was to design an AI system capable of contextual and human-like interaction.",
+      solution:
+        "Built a full-stack AI application that processes user inputs in real time, communicates with a Generative AI model, and delivers responsive conversational experiences.",
+      features: [
+        "Real-time AI conversations",
+        "Multilingual interaction support",
+        "REST API-based backend",
+        "Responsive modern UI",
+        "Context-aware responses",
+      ],
+      tech: [
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "REST APIs",
+        "Generative AI",
+      ],
       linkLabel: "Live demo",
       linkHref: "#contact",
     },
     {
-      name: "Skin Cancer Detection",
+      name: "Skin Cancer Detection System",
       highlight: "AI / ML showcase",
-      problem: "Detecting complex skin lesion patterns with limited manual review.",
-      solution: "A TensorFlow model trained on HAM10000 to classify dermatology images with high accuracy.",
-      architecture: "Image preprocessing pipeline, CNN model training, and prediction dashboard for sample cases.",
-      tech: ["TensorFlow", "Python", "CNN", "Keras"],
-      demo: "Prediction flow, dataset workflow, and accuracy insights for medical image classification.",
+      description:
+        "A machine learning application developed to classify skin lesions using medical image datasets.",
+      problem:
+        "Medical image diagnosis often requires faster, more accurate support for clinicians and patients.",
+      solution:
+        "The model was trained using the HAM10000 dataset with preprocessing and normalization techniques to improve prediction accuracy. A Flask API was implemented to serve predictions in real time.",
+      contributions: [
+        "Image preprocessing and normalization",
+        "Model training using TensorFlow",
+        "Medical dataset handling",
+        "Deployment via Flask API",
+      ],
+      tech: ["Python", "TensorFlow", "Flask", "Machine Learning"],
       linkLabel: "Model details",
       linkHref: "#contact",
     },
     {
-      name: "Quiz Buddy",
+      name: "Quiz Buddy — Programming Practice Platform",
       highlight: "Frontend proof",
-      problem: "Learners need an engaging quiz platform with instant feedback and responsive design.",
-      solution: "A modern quiz app with score tracking, adaptive UI, and fast user interactions.",
-      architecture: "React frontend, Express API, MongoDB storage, and responsive design throughout.",
-      tech: ["React", "Express", "MongoDB", "Tailwind CSS"],
-      demo: "Clean UI, multiple quiz modes, and mobile-friendly exam flows.",
+      description:
+        "Quiz Buddy is a responsive programming quiz platform designed to help users practice coding concepts across multiple difficulty levels.",
+      problem:
+        "Learners need an engaging quiz platform with instant feedback and seamless interaction.",
+      solution:
+        "The project focuses on dynamic UI rendering, score tracking, and seamless frontend interaction integrated with backend services.",
+      features: [
+        "Dynamic question rendering",
+        "Real-time score tracking",
+        "Multi-level quizzes",
+        "Mobile-friendly responsive design",
+      ],
+      tech: ["HTML5", "CSS3", "JavaScript (ES6)"],
       linkLabel: "View UI",
       linkHref: "#contact",
     },
@@ -85,22 +116,27 @@ export default function Projects() {
 
             {/* Description */}
             <p className="text-gray-400 mt-4 leading-relaxed text-sm md:text-base">
-              {p.problem}
+              {p.description}
             </p>
 
             <div className="mt-6 space-y-4 text-gray-300 text-sm md:text-base">
               <div>
+                <p className="font-semibold text-white">Problem</p>
+                <p className="mt-2 text-gray-400">{p.problem}</p>
+              </div>
+              <div>
                 <p className="font-semibold text-white">Solution</p>
                 <p className="mt-2 text-gray-400">{p.solution}</p>
               </div>
-              <div>
-                <p className="font-semibold text-white">Architecture</p>
-                <p className="mt-2 text-gray-400">{p.architecture}</p>
-              </div>
-              <div>
-                <p className="font-semibold text-white">Demo</p>
-                <p className="mt-2 text-gray-400">{p.demo}</p>
-              </div>
+            </div>
+
+            <div className="mt-6">
+              <p className="font-semibold text-white">Key {p.contributions ? "Contributions" : "Features"}</p>
+              <ul className="mt-3 grid gap-2 text-gray-400 text-sm md:text-base list-disc list-inside">
+                {(p.contributions || p.features).map((item, index) => (
+                  <li key={index}>{item}</li>
+                ))}
+              </ul>
             </div>
 
             {/* Tech Stack */}
@@ -113,24 +149,6 @@ export default function Projects() {
                   {t}
                 </span>
               ))}
-            </div>
-
-            {/* Buttons */}
-            <div className="flex flex-wrap gap-3 mt-6">
-              <a
-                href="https://github.com/shalini355"
-                target="_blank"
-                rel="noreferrer"
-                className="text-sm font-semibold text-white rounded-full bg-purple-600/20 px-4 py-2 transition hover:bg-purple-500/30"
-              >
-                GitHub
-              </a>
-              <a
-                href={p.linkHref}
-                className="text-sm font-semibold text-gray-300 rounded-full border border-white/10 px-4 py-2 transition hover:bg-white/10"
-              >
-                {p.linkLabel}
-              </a>
             </div>
 
           </motion.div>

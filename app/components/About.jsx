@@ -26,28 +26,30 @@ export default function About() {
         {/* Card */}
         <div className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl p-8 shadow-xl shadow-slate-950/20">
           <p className="text-gray-300 leading-relaxed text-lg">
-            I&apos;m a Computer Science student passionate about combining AI
-            and web development to build intelligent systems. I enjoy turning
-            complex ideas into usable products and exploring how Generative AI
-            can improve real-world applications.
+            I am a Computer Science undergraduate passionate about building
+            intelligent digital experiences that merge Artificial Intelligence
+            with modern web development.
           </p>
 
-          <div className="mt-8 space-y-4 text-left">
-            <div>
-              <p className="font-semibold text-white">What I build</p>
-              <p className="text-gray-400 mt-2 text-sm">
-                Interactive web apps powered by AI, from smart assistants to
-                ML-backed prediction tools.
-              </p>
-            </div>
-            <div>
-              <p className="font-semibold text-white">How I approach it</p>
-              <p className="text-gray-400 mt-2 text-sm">
-                I blend clean front-end UX, reliable backend services, and
-                data-driven AI models to deliver recruiter-ready solutions.
-              </p>
-            </div>
-          </div>
+          <p className="text-gray-300 leading-relaxed text-lg mt-6">
+            My journey started with frontend development using React.js and
+            gradually expanded into backend systems and machine learning. I
+            enjoy transforming complex ideas into practical applications — from
+            AI conversational assistants to real-world image classification
+            systems.
+          </p>
+
+          <p className="text-gray-300 leading-relaxed text-lg mt-6">
+            I am particularly interested in Generative AI, full-stack
+            architecture, and designing applications that are both technically
+            strong and user-friendly.
+          </p>
+
+          <p className="text-gray-300 leading-relaxed text-lg mt-6">
+            When I am not coding, I actively participate in technical
+            communities, hackathons, and learning new technologies shaping the
+            future of software development.
+          </p>
         </div>
       </motion.div>
     </section>
