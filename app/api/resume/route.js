@@ -10,7 +10,7 @@ export async function GET() {
       status: 200,
       headers: {
         "Content-Type": "application/pdf",
-        "Content-Disposition": 'attachment; filename="Shalini_Yadav_Resume.pdf"',
+        "Content-Disposition": 'attachment; filename="Shalini_Yadav_Final_Resume.pdf"',
       },
     });
   } catch (error) {
