@@ -18,7 +18,7 @@ export default function Experience() {
 
   return (
     <section id="experience" className="relative py-24 px-4 sm:px-6 overflow-hidden">
-      <div className="absolute w-100 h-100 bg-blue-600/10 blur-[140px] rounded-full -z-10 right-0 top-24" />
+      <div className="absolute w-110 h-110 bg-blue-600/10 blur-[140px] rounded-full -z-10 right-0 top-24" />
 
       <motion.div
         initial={{ opacity: 0, y: 30 }}

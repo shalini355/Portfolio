@@ -11,7 +11,7 @@ export default function Navbar() {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 w-full z-50 backdrop-blur-xl bg-black/40 border-b border-white/10"
+      className="fixed inset-x-0 top-0 w-full z-50 overflow-hidden backdrop-blur-xl bg-black/40 border-b border-white/10"
     >
       <div className="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-4 px-4 sm:px-6 py-4">
         <h1 className="text-lg font-bold tracking-wide text-white">Shalini.dev</h1>

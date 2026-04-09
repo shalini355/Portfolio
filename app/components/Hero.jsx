@@ -42,11 +42,11 @@ export default function Hero() {
 
   return (
 
-    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 overflow-hidden">
+    <section className="relative min-h-screen pt-24 sm:pt-28 flex items-center justify-center px-4 sm:px-6 overflow-hidden">
 
       {/* Background Glow */}
-      <div className="absolute w-150 h-150 bg-purple-600/20 blur-[140px] rounded-full -top-37.5 -left-37.5" />
-      <div className="absolute w-125 h-125 bg-blue-600/20 blur-[120px] rounded-full -bottom-30 -right-30" />
+      <div className="absolute w-130 h-130 bg-purple-600/20 blur-[140px] rounded-full -top-37.5 -left-37.5" />
+      <div className="absolute w-105 h-105 bg-blue-600/20 blur-[120px] rounded-full -bottom-30 -right-30" />
 
       {/* Content */}
       <div className="relative text-center max-w-3xl">
@@ -56,7 +56,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-5xl md:text-7xl font-bold tracking-tight"
+          className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight"
         >
           <span className="text-white">Hi, I&apos;m Shalini Yadav</span>
         </motion.h1>
@@ -66,7 +66,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="mt-6 text-2xl md:text-3xl font-semibold text-purple-300"
+          className="mt-6 text-xl sm:text-2xl md:text-3xl font-semibold text-purple-300"
         >
           <span className="block">
             <span className="text-white">{text}</span>
@@ -110,14 +110,14 @@ export default function Hero() {
         >
           <a
             href="#projects"
-            className="relative inline-flex w-full max-w-60 items-center justify-center px-10 py-4 rounded-3xl font-semibold text-white overflow-hidden bg-linear-to-r from-purple-600 to-blue-500 shadow-lg shadow-purple-500/30 transition duration-300 hover:-translate-y-1 sm:w-auto"
+            className="relative inline-flex w-full max-w-60 items-center justify-center px-8 py-4 rounded-3xl font-semibold text-white overflow-hidden bg-linear-to-r from-purple-600 to-blue-500 shadow-lg shadow-purple-500/30 transition duration-300 hover:-translate-y-1 sm:w-auto"
           >
             View Projects →
           </a>
 
           <a
             href="/api/resume"
-            className="inline-flex w-full max-w-60 items-center justify-center px-10 py-4 rounded-3xl font-semibold text-white border border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-300 sm:w-auto"
+            className="inline-flex w-full max-w-60 items-center justify-center px-8 py-4 rounded-3xl font-semibold text-white border border-white/20 bg-white/5 backdrop-blur-md hover:bg-white/10 transition duration-300 sm:w-auto"
           >
             Download Resume
           </a>

@@ -74,7 +74,7 @@ export default function Projects() {
     <section id="projects" className="relative py-24 px-4 sm:px-6 text-center">
 
       {/* Background glow */}
-      <div className="absolute w-152 h-152 bg-purple-600/10 blur-[140px] rounded-full -z-10 left-0" />
+      <div className="absolute w-155 h-155 bg-purple-600/10 blur-[140px] rounded-full -z-10 left-0 top-10" />
 
       {/* Heading */}
       <motion.h2

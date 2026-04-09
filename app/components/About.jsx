@@ -9,7 +9,7 @@ export default function About() {
       className="relative py-24 px-4 sm:px-6 flex justify-center"
     >
       {/* Glow background */}
-      <div className="absolute w-125 h-125 bg-purple-600/10 blur-[140px] rounded-full -z-10" />
+      <div className="absolute w-130 h-130 bg-purple-600/10 blur-[140px] rounded-full -z-10" />
 
       <motion.div
         initial={{ opacity: 0, y: 40 }}

@@ -7,7 +7,7 @@ export default function Contact() {
     <section className="relative py-24 px-4 sm:px-6 text-center overflow-hidden">
 
       {/* Background Glow */}
-      <div className="absolute w-125 h-125 bg-purple-600/20 blur-[140px] rounded-full left-1/2 -translate-x-1/2 top-10 -z-10" />
+      <div className="absolute w-130 h-130 bg-purple-600/20 blur-[140px] rounded-full left-1/2 -translate-x-1/2 top-10 -z-10" />
 
       {/* Heading */}
       <motion.h2

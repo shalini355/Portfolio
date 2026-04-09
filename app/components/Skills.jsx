@@ -38,7 +38,7 @@ export default function Skills() {
     <section id="skills" className="relative py-28 px-6 text-center">
 
       {/* background glow */}
-      <div className="absolute w-125 h-125 bg-blue-600/10 blur-[140px] rounded-full -z-10 right-0" />
+      <div className="absolute w-130 h-130 bg-blue-600/10 blur-[140px] rounded-full -z-10 right-0 top-0" />
 
       {/* Heading */}
       <motion.h2
